@@ -5,6 +5,7 @@ function App() {
  <h2>LAB -1</h2>
  <p>Ad Soyad: [Yunus Fırat]</p>
  <p>Ogrenci No: [230541007]</p>
+ <p>Ogrenci Yası: [22]</p>
  </div>
  )
 }
