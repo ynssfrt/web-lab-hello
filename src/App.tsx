@@ -61,7 +61,7 @@ function App() {
         <option value="soru">Soru</option>
         <option value="oneri">Oneri</option>
       </select>
-      <small id="subject-error" className="error-msg" role="alert"></small>
+      <small id="subject-error" className="error-msg" role="alert"></small> 
     </div>
 
     <div className="form-group">
