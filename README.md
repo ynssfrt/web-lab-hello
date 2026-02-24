@@ -28,7 +28,7 @@ Bu laboratuvar çalışmasında aşağıdaki kriterler başarıyla uygulanmışt
 
 ## 🛠️ Kullanılan Teknolojiler
 - React 18
-- TypeScript
+- TypeScript 
 - Vite
 - Semantik HTML5 & CSS3
 
