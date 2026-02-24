@@ -1,15 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
  return (
  <div>
  <h1>Web Tasarimi ve Programlama </h1>
  <h2>LAB -1</h2>
- <p>Ad Soyad: [Kendi Adin]</p>
- <p>Ogrenci No: [Numaran]</p>
+ <p>Ad Soyad: [Yunus Fırat]</p>
+ <p>Ogrenci No: [230541007]</p>
  </div>
  )
 }
