@@ -1,6 +1,6 @@
 # Web LAB-2: Semantik HTML ve Erişilebilirlik (Ally)
 
-Bu proje, Web Tasarımı ve Programlama dersi LAB-2 kapsamında, bir web sayfasının semantik yapısını doğru kurma, erişilebilirlik standartlarını (WCAG) uygulama ve form yönetimi temellerini öğrenmek amacıyla geliştirilmiştir.
+Bu proje, Web Tasarımı ve Programlama dersi LAB-2 kapsamında bir web sayfasının semantik yapısını doğru kurma, erişilebilirlik standartlarını (WCAG) uygulama ve form yönetimi temellerini öğrenmek amacıyla geliştirilmiştir.
 
 ## 👤 Geliştirici Bilgileri
 - **Ad Soyad:** Yunus Fırat
@@ -28,7 +28,7 @@ Bu laboratuvar çalışmasında aşağıdaki kriterler başarıyla uygulanmışt
 
 ## 🛠️ Kullanılan Teknolojiler
 - React 18
-- TypeScript 
+- TypeScript
 - Vite
 - Semantik HTML5 & CSS3
 
