@@ -6,7 +6,7 @@ function App() {
       <a href="#main-content" className="skip-link">Ana icerige atla</a>
 
       <header>
-        {/* Uygulama-4: Site basligina .site-title sinifi eklendi */}
+        {/* Uygulama-4: Site basligina .site-title sinifi eklendi  */}
         <h1 className="site-title">Yunus'un Kisisel Portfolyosu</h1> 
         <nav aria-label="Ana navigasyon">
           <ul>
