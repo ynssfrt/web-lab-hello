@@ -1,13 +1,14 @@
+import './App.css';
 function App() {
   return (
     <> 
-      {/* Uygulama-3: Skip Navigation - Boşluklar temizlendi [cite: 330-335, 525] */}
+      {/* Uygulama-3: Skip Navigation */}
       <a href="#main-content" className="skip-link">Ana icerige atla</a>
 
       <header>
-        {/* h1: Sayfanın ana başlığı her sayfada bir tane olmalıdır [cite: 192, 203, 523] */}
-        <h1>Yunus'un Kisisel Portfolyosu</h1> 
-        <nav aria-label="Ana navigasyon"> {/* [cite: 317, 524] */}
+        {/* Uygulama-4: Site basligina .site-title sinifi eklendi */}
+        <h1 className="site-title">Yunus'un Kisisel Portfolyosu</h1> 
+        <nav aria-label="Ana navigasyon">
           <ul>
             <li><a href="#hakkimda">Hakkimda</a></li>
             <li><a href="#projeler">Projeler</a></li>
@@ -16,44 +17,60 @@ function App() {
         </nav>
       </header>
 
-      <main id="main-content"> {/* [cite: 83, 341] */}
+      <main id="main-content">
         
-        {/* Uygulama-5 Madde 2: Hakkımda Bölümü [cite: 526-530] */}
+        {/* Uygulama-7: Responsive duzen icin .about-content kapsayicisi eklendi */}
         <section id="hakkimda">
           <h2>Hakkimda</h2>
-          <figure> {/* [cite: 255-261, 528] */}
-             <img src="/profil.jpg" alt="Yunus'un vesikalik fotografi" />
-             <figcaption>Yunus - Yazilim Muhendisi Adayi</figcaption>
-          </figure>
-          {/* Tanıtım paragrafı ve teknoloji listesi eklendi  */}
-          <p>Firat Universitesi Yazilim Muhendisligi 3. sinif ogrencisiyim. Web teknolojileri ve erisilebilirlik uzerine calismalar yapiyorum.</p>
-          <ul>
-            <li>HTML5 & CSS3</li>
-            <li>React & TypeScript</li>
-            <li>Git & GitHub</li>
-          </ul>
+          <div className="about-content">
+            <figure>
+               <img src="/profil.jpg" alt="Yunus'un vesikalik fotografi" />
+               <figcaption>Yunus - Yazilim Muhendisi Adayi</figcaption>
+            </figure>
+            <div>
+              <p>Firat Universitesi Yazilim Muhendisligi 3. sinif ogrencisiyim. Web teknolojileri ve erisilebilirlik uzerine calismalar yapiyorum.</p>
+              
+              {/* Uygulama-5: Liste .skill-tags sinifi ile etiketlere donusturuldu */}
+              <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
+                <li>HTML5 & CSS3</li>
+                <li>React & TypeScript</li>
+                <li>Git & GitHub</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
-        {/* Uygulama-5 Madde 3: Projelerim Bölümü (En az 2 kart) [cite: 531-534] */}
+        {/* Uygulama-6: Projeler .project-grid kapsayicisi ve .project-card etiketleri ile duzenlendi */}
         <section id="projeler">
           <h2>Projelerim</h2>
-          <article> {/* 1. Proje Kartı [cite: 532, 533] */}
-            <h3>E-Ticaret Projesi</h3>
-            <p>React ile geliştirilmiş semantik yapıya sahip bir web uygulaması.</p>
-            <p><strong>Teknolojiler:</strong> React, CSS Modules</p>
-          </article>
-          
-          <article> {/* 2. Proje Kartı - Eklendi [cite: 532, 533] */}
-            <h3>Hava Durumu Portali</h3>
-            <p>TypeScript kullanılarak tip güvenliği sağlanmış dinamik bir portal.</p>
-            <p><strong>Teknolojiler:</strong> TypeScript, API Integration</p>
-          </article>
+          <div className="project-grid">
+            
+            <article className="project-card">
+              <img src="/proje1.jpg" alt="E-Ticaret sitesi ekran goruntusu" />
+              <h3>E-Ticaret Projesi</h3>
+              <p>React ile geliştirilmiş semantik yapıya sahip bir web uygulaması.</p>
+              <ul className="skill-tags">
+                <li>React</li>
+                <li>CSS Modules</li>
+              </ul>
+            </article>
+            
+            <article className="project-card">
+              <img src="/proje2.jpg" alt="Hava durumu uygulamasi arayuzu" />
+              <h3>Hava Durumu Portali</h3>
+              <p>TypeScript kullanılarak tip güvenliği sağlanmış dinamik bir portal.</p>
+              <ul className="skill-tags">
+                <li>TypeScript</li>
+                <li>API</li>
+              </ul>
+            </article>
+
+          </div>
         </section>
 
-        {/* Uygulama-5 Madde 4: İletişim Bölümü [cite: 535-538] */}
         <section id="iletisim">
           <h2>Iletisim</h2>
-          <form action="#" method="POST" noValidate> {/* [cite: 426, 503] */}
+          <form action="#" method="POST" noValidate>
             <fieldset>
               <legend>Iletisim Formu</legend>
               
@@ -92,7 +109,6 @@ function App() {
         </section>
       </main>
 
-      {/* Uygulama-5 Madde 5: Footer [cite: 539-540] */}
       <footer>
         <p>&copy; 2026 Yunus. Tum haklari saklidir.</p>
       </footer>
