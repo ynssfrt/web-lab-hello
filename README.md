@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+# Web LAB-2: Semantik HTML ve Erişilebilirlik (Ally)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, Web Tasarımı ve Programlama dersi LAB-2 kapsamında bir web sayfasının semantik yapısını doğru kurma, erişilebilirlik standartlarını (WCAG) uygulama ve form yönetimi temellerini öğrenmek amacıyla geliştirilmiştir.
 
-Currently, two official plugins are available:
+## 👤 Geliştirici Bilgileri
+- **Ad Soyad:** Yunus Fırat
+- **Öğrenci No:** 230541007
+- **Bölüm:** Yazılım Mühendisliği
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Proje Kapsamında Yapılanlar
+Bu laboratuvar çalışmasında aşağıdaki kriterler başarıyla uygulanmıştır:
 
-## React Compiler
+- **Semantik HTML5 Yapısı:** Sayfa; [cite_start]`<header>`, `<nav>`, `<main>`, `<section>`, `<article>` ve `<footer>` etiketleri kullanılarak anlamlı bir yapıya kavuşturulmuştur[cite: 73, 101, 670].
+- [cite_start]**Heading Hiyerarşisi:** Erişilebilirlik için `<h1>`'den başlayarak ardışık ve mantıklı bir başlık düzeni (h1 -> h2 -> h3) kurulmuştur[cite: 191, 201, 671].
+- [cite_start]**Erişilebilirlik (Ally) Özellikleri:** - Tüm görsellere anlamlı `alt` metinleri eklenmiştir[cite: 241, 672].
+    - [cite_start]Sayfa içi erişimi hızlandıran "Ana içeriğe atla" (Skip Navigation) bağlantısı eklenmiştir[cite: 330, 677].
+    - [cite_start]Navigasyon alanları `aria-label` ile etiketlenmiştir[cite: 316].
+    - [cite_start]Klavye ile gezinme (Tab Navigation) desteği sağlanmış ve `focus` göstergesi optimize edilmiştir[cite: 298, 561, 676].
+- [cite_start]**Form Doğrulama ve Erişilebilirlik:** - Tüm form elemanları `htmlFor` ve `id` ile ilişkili `label` etiketlerine sahiptir[cite: 385, 673].
+    - [cite_start]`required`, `minlength` ve `type="email"` gibi HTML5 yerleşik doğrulama öznitelikleri kullanılmıştır[cite: 414, 674].
+    - [cite_start]Hata mesajı alanları `role="alert"` ile erişilebilir hale getirilmiştir[cite: 433, 505, 675].
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📊 Lighthouse Erişilebilirlik Testi
+[cite_start]Projenin erişilebilirlik puanı Google Lighthouse aracı ile ölçülmüş ve **90+** puan hedefine ulaşılmıştır[cite: 607, 619, 679].
 
-Note: This will impact Vite dev & build performances.
+**Lighthouse Rapor Ekran Görüntüsü:**
+![Lighthouse Erişilebilirlik Skoru](./lighthouse-sonuc.png)
 
-## Expanding the ESLint configuration
+## 🛠️ Kullanılan Teknolojiler
+- React 18
+- TypeScript
+- Vite
+- Semantik HTML5 & CSS3
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 💻 Kurulum ve Çalıştırma
+1. Bağımlılıkları yükleyin:
+   ```bash
+   npm install
