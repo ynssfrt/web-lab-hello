@@ -1,38 +1,30 @@
-# Web LAB-2: Semantik HTML ve Erişilebilirlik (Ally)
+# 🚀 Yunus'un Portfolyosu (Web Tasarımı ve Programlama LAB)
 
-Bu proje, Web Tasarımı ve Programlama dersi LAB-2 kapsamında bir web sayfasının semantik yapısını doğru kurma, erişilebilirlik standartlarını (WCAG) uygulama ve form yönetimi temellerini öğrenmek amacıyla geliştirilmiştir.
+Bu proje, modern web teknolojileri (React, TypeScript, Tailwind CSS) kullanılarak geliştirilmiş kişisel bir portfolyo uygulamasıdır. Proje, laboratuvar dersleri kapsamında adım adım inşa edilmiş olup **Checkpoint #1** gereksinimlerini tam olarak karşılamaktadır.
 
 ## 👤 Geliştirici Bilgileri
 - **Ad Soyad:** Yunus Fırat
 - **Öğrenci No:** 230541007
 - **Bölüm:** Yazılım Mühendisliği
 
-## 🚀 Proje Kapsamında Yapılanlar
-Bu laboratuvar çalışmasında aşağıdaki kriterler başarıyla uygulanmıştır:
-
-- **Semantik HTML5 Yapısı:** Sayfa; [cite_start]`<header>`, `<nav>`, `<main>`, `<section>`, `<article>` ve `<footer>` etiketleri kullanılarak anlamlı bir yapıya kavuşturulmuştur[cite: 73, 101, 670].
-- [cite_start]**Heading Hiyerarşisi:** Erişilebilirlik için `<h1>`'den başlayarak ardışık ve mantıklı bir başlık düzeni (h1 -> h2 -> h3) kurulmuştur[cite: 191, 201, 671].
-- [cite_start]**Erişilebilirlik (Ally) Özellikleri:** - Tüm görsellere anlamlı `alt` metinleri eklenmiştir[cite: 241, 672].
-    - [cite_start]Sayfa içi erişimi hızlandıran "Ana içeriğe atla" (Skip Navigation) bağlantısı eklenmiştir[cite: 330, 677].
-    - [cite_start]Navigasyon alanları `aria-label` ile etiketlenmiştir[cite: 316].
-    - [cite_start]Klavye ile gezinme (Tab Navigation) desteği sağlanmış ve `focus` göstergesi optimize edilmiştir[cite: 298, 561, 676].
-- [cite_start]**Form Doğrulama ve Erişilebilirlik:** - Tüm form elemanları `htmlFor` ve `id` ile ilişkili `label` etiketlerine sahiptir[cite: 385, 673].
-    - [cite_start]`required`, `minlength` ve `type="email"` gibi HTML5 yerleşik doğrulama öznitelikleri kullanılmıştır[cite: 414, 674].
-    - [cite_start]Hata mesajı alanları `role="alert"` ile erişilebilir hale getirilmiştir[cite: 433, 505, 675].
-
-## 📊 Lighthouse Erişilebilirlik Testi
-[cite_start]Projenin erişilebilirlik puanı Google Lighthouse aracı ile ölçülmüş ve **90+** puan hedefine ulaşılmıştır[cite: 607, 619, 679].
-
-**Lighthouse Rapor Ekran Görüntüsü:**
-![Lighthouse Erişilebilirlik Skoru](./lighthouse-sonuc.png)
+## 🌟 Özellikler
+* **Modern UI/UX:** Tailwind CSS ile tasarlanmış responsive (mobil uyumlu) arayüz.
+* **Karanlık Tema (Dark Mode):** Kullanıcı tercihine göre anlık değişebilen tema desteği.
+* **Dinamik Proje Listesi:** JSON dosyasından asenkron (Fetch API) olarak çekilen veriler.
+* **Filtreleme & Sıralama:** Projeler arasında metin, kategori bazlı arama ve yıla/başlığa göre sıralama (React `useState` ve `useMemo` optimizasyonu ile).
+* **Kontrollü Form:** Anlık doğrulama (validation) yapan iletişim formu.
+* **Tip Güvenliği:** Sıfır `any` prensibiyle yazılmış katı TypeScript mimarisi.
 
 ## 🛠️ Kullanılan Teknolojiler
-- React 18
-- TypeScript
-- Vite
-- Semantik HTML5 & CSS3
+* React (Functional Components, Hooks)
+* TypeScript
+* Tailwind CSS
+* HTML5 / CSS3 (Semantik ve Erişilebilir)
+* Vite (Build aracı)
 
-## 💻 Kurulum ve Çalıştırma
-1. Bağımlılıkları yükleyin:
-   ```bash
-   npm install
+## 📦 Kurulum ve Çalıştırma
+Projeyi yerel bilgisayarınızda çalıştırmak için:
+
+1. Depoyu klonlayın: `git clone https://github.com/ynssfrt/web-lab-hello.git`
+2. Bağımlılıkları yükleyin: `npm install`
+3. Geliştirme sunucusunu başlatın: `npm run dev`
