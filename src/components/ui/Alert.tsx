@@ -1,10 +1,22 @@
+import type { ReactNode } from "react";
+
+interface AlertProps {
+  children: ReactNode;
+  variant?: "info" | "success" | "warning" | "error";
+  title?: string;
+  dismissible?: boolean;
+  onDismiss?: () => void;
+  className?: string; // Dışarıdan class ekleyebilmek için
+}
+
 export default function Alert({
   children,
   variant = "info",
   title,
   dismissible = false,
   onDismiss,
-}) {
+  className = "",
+}: AlertProps) {
   const variants = {
     info: "bg-blue-50 border-blue-500 text-blue-800 dark:bg-blue-950 dark:text-blue-200",
     success: "bg-green-50 border-green-500 text-green-800 dark:bg-green-950 dark:text-green-200",
@@ -13,15 +25,13 @@ export default function Alert({
   };
 
   return (
-    <div role="alert" className={`border-l-4 rounded-r-lg p-4 ${variants[variant]}`}>
+    <div role="alert" className={`border-l-4 rounded-r-lg p-4 ${variants[variant]} ${className}`}>
       <div className="flex justify-between items-start">
         <div>
-          {title && (
-            <p className="font-semibold mb-1">{title}</p>
-          )}
-          <p className="text-sm">{children}</p>
+          {title && <p className="font-semibold mb-1">{title}</p>}
+          <div className="text-sm">{children}</div>
         </div>
-        {dismissible && (
+        {dismissible && onDismiss && (
           <button onClick={onDismiss} className="ml-4 opacity-60 hover:opacity-100" aria-label="Kapat">
             &#10005;
           </button>
